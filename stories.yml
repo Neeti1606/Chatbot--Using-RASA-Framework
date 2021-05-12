@@ -1,0 +1,105 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: restaurant_book
+  steps:
+  - intent: book
+  - action: utter_book 
+  - intent: seats
+  - action: utter_seats  
+  - intent: Condition1
+  - action: utter_time
+  - intent: Time
+  - action: utter_result 
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: rbook2
+  steps:
+  - intent: book2
+  - action: utter_seats
+  - intent: Condition2
+  - action: utter_time
+  - intent: Time2
+  - action: utter_time2
+  - action: utter_time
+  - intent: Time
+  - action: utter_result2
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: rbook3
+  steps:
+  - intent: book2
+  - action: utter_seats
+  - intent: Condition1
+  - action: utter_time
+  - intent: FAQ2
+  - action: utter_FAQ2
+  - action: utter_time
+  - intent: Time
+  - action: utter_result3
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: rbook4
+  steps:
+  - intent: FAQ1
+  - action: utter_FAQ2  
+  - intent: book2
+  - action: utter_seats
+  - intent: Condition2
+  - action: utter_time
+  - intent: FAQ2
+  - action: utter_FAQ2
+  - action: utter_time
+  - intent: Time
+  - action: utter_result3
+  - intent: FAQ3
+  - action: utter_FAQ3
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: rbook5
+  steps:
+  - intent: book2
+  - action: utter_seats
+  - intent: Condition2
+  - action: utter_time
+  - intent: FAQ4
+  - action: utter_FAQ4
+  - action: utter_time
+  - intent: Time
+  - action: utter_result3
+  - intent: FAQ2
+  - action: utter_FAQ2
+  - intent: goodbye
+  - action: utter_goodbye  
